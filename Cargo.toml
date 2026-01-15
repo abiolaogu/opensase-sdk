@@ -1,0 +1,28 @@
+[package]
+name = "opensase-sdk"
+version = "0.1.0"
+edition = "2021"
+description = "OpenSASE SDK for Rust - Connect to SASE platform and self-hosted services"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/abiolaogu/opensase-sdk"
+keywords = ["sase", "sdk", "api", "client"]
+
+[dependencies]
+reqwest = { version = "0.11", features = ["json"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tokio = { version = "1.35", features = ["rt-multi-thread"] }
+thiserror = "1.0"
+url = "2.5"
+async-nats = { version = "0.33", optional = true }
+tracing = "0.1"
+uuid = { version = "1.6", features = ["v4", "serde"] }
+chrono = { version = "0.4", features = ["serde"] }
+
+[features]
+default = []
+events = ["async-nats"]
+
+[dev-dependencies]
+tokio-test = "0.4"
+wiremock = "0.5"
