@@ -1,0 +1,11 @@
+tenant: billyronks
+namespace: extract-sdk
+topics:
+  - name: persistent://billyronks/extract-sdk/command
+    partitions: 6
+  - name: persistent://billyronks/extract-sdk/event
+    partitions: 6
+  - name: persistent://billyronks/extract-sdk/audit
+    partitions: 6
+  - name: persistent://billyronks/global/observability
+    partitions: 6
