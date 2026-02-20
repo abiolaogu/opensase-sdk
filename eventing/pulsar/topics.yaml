@@ -1,0 +1,11 @@
+tenant: billyronks
+namespace: opensase-sdk
+topics:
+  - name: persistent://billyronks/opensase-sdk/command
+    partitions: 6
+  - name: persistent://billyronks/opensase-sdk/event
+    partitions: 6
+  - name: persistent://billyronks/opensase-sdk/audit
+    partitions: 6
+  - name: persistent://billyronks/global/observability
+    partitions: 6

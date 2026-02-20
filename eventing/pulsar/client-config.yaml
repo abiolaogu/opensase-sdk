@@ -1,0 +1,11 @@
+pulsar:
+  broker_url: pulsar://pulsar-broker.pulsar.svc.cluster.local:6650
+  http_url: http://pulsar-broker.pulsar.svc.cluster.local:8080
+  tenant: billyronks
+  namespace: opensase-sdk
+  producers:
+    - topic: persistent://billyronks/opensase-sdk/command
+    - topic: persistent://billyronks/opensase-sdk/event
+  consumers:
+    - topic: persistent://billyronks/opensase-sdk/audit
+      subscription: opensase-sdk-svc-sub
